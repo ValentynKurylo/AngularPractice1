@@ -1,0 +1,7 @@
+<!--<div>  {{post.id}} - {{post.title}} <button (click)="showComments()">Show Comments</button>  :</div>
+<router-outlet></router-outlet>-->
+<div>{{post.id}} - {{post.title}}</div>
+<app-comments [postId]="post.id"></app-comments>
+
+
+
