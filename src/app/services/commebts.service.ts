@@ -19,10 +19,10 @@ export class CommentsService {
  //private post: Post
 
   private url = 'https://jsonplaceholder.typicode.com/posts/'
- // private url = 'https://jsonplaceholder.typicode.com/comments/'
+  //private url = 'https://jsonplaceholder.typicode.com/comments/'
   constructor(private httpClint: HttpClient) { }
   getComments(postId: number): Observable<Comment[]>{
     console.log(postId);
-    return this.httpClint.get<Comment[]>(this.url  + 9 + '/comments')
+    return this.httpClint.get<Comment[]>(this.url + postId + '/comments')
   }
 }
